@@ -1,16 +1,4 @@
 ja:
-  activerecord:
-    errors:
-      models:
-        user: # Userモデルの場合
-          attributes:
-            email:
-              taken: "このメールアドレスは既に登録されています。"
-      messages:
-        taken: "既に使用されています。"
-  errors:
-    messages:
-      taken: "既に使用されています。"
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

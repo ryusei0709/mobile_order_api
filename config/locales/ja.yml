@@ -3,6 +3,14 @@ ja:
     attributes:
       user:
         email: メールアドレス
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: 必須入力項目です
+              taken: このメールアドレスは利用することができません。
+              invalid: 無効なメールアドレスです
   devise_token_auth:
     sessions:
       not_confirmed: "'%{email}' に確認用のメールを送信しました。メール内の説明を読み、アカウントの有効化をしてください。"
@@ -40,7 +48,6 @@ ja:
       sended_paranoid: "すでにメールアドレスがデータベースに登録されている場合、数分後にメールアドレスの確認方法を記載したメールをお送りします。"
       user_not_found: "メールアドレス '%{email}' を持つユーザーが見つかりません。"
       missing_email: "メールアドレスが与えられていません。"
-
   errors:
     messages:
       validate_sign_up_params: "リクエストボディに適切なアカウント新規登録データを送信してください。"
