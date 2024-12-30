@@ -17,4 +17,7 @@
 #  fk_rails_...  (corporation_id => corporations.id)
 #
 class Restaurant < ApplicationRecord
+  has_many :menu_categories, dependent: :destroy
+
+  belongs_to :corporation
 end

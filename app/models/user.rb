@@ -35,5 +35,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  
+
 end

@@ -21,5 +21,9 @@
 #  fk_rails_...  (menu_category_id => menu_categories.id)
 #  fk_rails_...  (restaurant_id => restaurants.id)
 #
+
 class Menu < ApplicationRecord
+  mount_uploader :image, MenuUploader
+  belongs_to :restaurant
+  belongs_to :menu_category
 end
