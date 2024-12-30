@@ -17,4 +17,6 @@
 #  fk_rails_...  (restaurant_id => restaurants.id)
 #
 class MenuCategory < ApplicationRecord
+  has_many :menus
+  belongs_to :restaurant
 end

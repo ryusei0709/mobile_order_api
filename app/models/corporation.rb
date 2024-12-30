@@ -8,4 +8,5 @@
 #  updated_at :datetime         not null
 #
 class Corporation < ApplicationRecord
+  has_many :restaurants, dependent: :destroy
 end

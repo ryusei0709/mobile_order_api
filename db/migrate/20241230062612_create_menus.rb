@@ -5,6 +5,7 @@ class CreateMenus < ActiveRecord::Migration[7.2]
       t.references :restaurant, null: false, foreign_key: true, type: :bigint, unsigned: true, comment: 'レストランID'
       t.string :title, null: false, comment: 'メニュータイトル'
       t.string :description, null: false, comment: 'メニュー説明'
+      t.string :image, null: false, comment: 'メニュー画像'
       t.bigint :price, null: false, unsigned: true, comment: '値段'
       t.timestamps
     end

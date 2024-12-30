@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+path = Rails.root.join('db', 'seeds', Rails.env, 'seeds.rb')
+require path if File.exist?(path)

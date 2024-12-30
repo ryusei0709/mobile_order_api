@@ -30,5 +30,22 @@ services:
       TZ: "Asia/Tokyo"
     ports:
       - "${MYSQL_POOT}:3306" # 環境変数から参照
+  minio:
+    container_name: mobile-order-minio
+    image: minio/minio:latest
+    platform: linux/amd64
+    volumes:
+      - minio:/export:delegated
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      ACCESSKEY: ${MINIO_ACCESS_KEY_ID}
+      SECRET_KEY: ${MINIO_SECRET_ACCESS_KEY}
+    entrypoint: sh
+    command: -c 'mkdir -p /export/mobile-order && mkdir -p /export/mobile-order-dev && minio server /export --console-address ":9001"'
 volumes:
+  minio:
   db-data:

@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_12_30_071213) do
     t.bigint "restaurant_id", null: false, comment: "レストランID", unsigned: true
     t.string "title", null: false, comment: "メニュータイトル"
     t.string "description", null: false, comment: "メニュー説明"
+    t.string "image", null: false, comment: "メニュー画像"
     t.bigint "price", null: false, comment: "値段", unsigned: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
