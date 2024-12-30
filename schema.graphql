@@ -1,0 +1,18 @@
+type Mutation {
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Query {
+  """
+  testだよ
+  """
+  hello: String!
+
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
