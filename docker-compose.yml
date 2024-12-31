@@ -36,6 +36,11 @@ services:
     platform: linux/amd64
     volumes:
       - minio:/export:delegated
+    networks:
+      default:
+        aliases:
+          - minio.127.0.0.1.nip.io
+          - file.minio.127.0.0.1.nip.io
     ports:
       - "9000:9000"
       - "9001:9001"
