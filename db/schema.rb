@@ -75,6 +75,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_12_30_071213) do
     t.string "table_number", null: false, comment: "テーブルナンバー"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["restaurant_id", "table_number"], name: "index_restaurant_tabels_on_restaurant_id_and_table_number", unique: true
     t.index ["restaurant_id"], name: "index_restaurant_tabels_on_restaurant_id"
   end
 

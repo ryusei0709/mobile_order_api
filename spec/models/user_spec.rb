@@ -33,6 +33,5 @@ RSpec.describe User, type: :model do
     let(:email) { 'test@example.com' }
 
     pp let(:email)
-
   end
 end

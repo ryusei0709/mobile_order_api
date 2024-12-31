@@ -8,7 +8,6 @@ class Api::V1::Auth::SessionsController < DeviseTokenAuth::SessionsController
   end
 
   def create
-
     super do
       # 認証成功時のカスタムレスポンス
       render json: { user: current_user, token: @token }.to_json and return
