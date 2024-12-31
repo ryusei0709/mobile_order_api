@@ -1,4 +1,4 @@
-FROM ruby:3.3.6
+FROM ruby:3.3.3
 
 # コンテナの作業ディレクトリ
 WORKDIR /app

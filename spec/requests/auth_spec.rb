@@ -14,7 +14,7 @@ RSpec.describe 'ユーザー登録を行う', type: :request do
     {
       name: 'test',
       email: '',
-      password: 'test1234',
+      password: 'test1234'
     }
   end
   describe 'POST /api/v1/auth にリクエスト' do
@@ -48,6 +48,5 @@ RSpec.describe 'ユーザー登録を行う', type: :request do
         expect(json_response['errors']['email']).to include('必須入力項目です')
       end
     end
-
   end
 end

@@ -10,7 +10,8 @@
 #
 # Indexes
 #
-#  index_restaurant_tabels_on_restaurant_id  (restaurant_id)
+#  index_restaurant_tabels_on_restaurant_id                   (restaurant_id)
+#  index_restaurant_tabels_on_restaurant_id_and_table_number  (restaurant_id,table_number) UNIQUE
 #
 # Foreign Keys
 #
@@ -18,6 +19,5 @@
 #
 FactoryBot.define do
   factory :restaurant_tabel do
-    
   end
 end
