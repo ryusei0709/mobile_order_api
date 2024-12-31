@@ -3,8 +3,17 @@ test:
   root: <%= Rails.root.join("tmp/storage") %>
 
 local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+  service: S3
+  access_key_id: <%= ENV.fetch('MINIO_ACCESS_KEY_ID', '') %>
+  secret_access_key: <%= ENV.fetch('MINIO_SECRET_ACCESS_KEY', '') %>
+  region: <%= ENV.fetch('MINIO_REGION', '') %>
+#<% if ENV['FILE_AWS_S3_ENDPOINT'].present? %>
+  endpoint: <%= ENV.fetch('MINIO_API_ENDPOINT', '') %>
+#<% end %>
+  bucket: <%= ENV.fetch('MINIO_BUCKET') %>
+  force_path_style: <%= ENV.fetch('AWS_S3_FORCE_PATH_STYLE', 'false') %>
+  public: true
+
 
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
