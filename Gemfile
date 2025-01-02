@@ -35,11 +35,11 @@ gem "devise_token_auth"
 
 gem "graphql"
 
-gem "annotate"
-
 gem "carrierwave", "~> 3.0"
 
 gem "fog-aws"
+
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -61,4 +61,6 @@ group :development, :test do
 
   # 開発ツール用
   gem "graphiql-rails"
+
+  gem "annotate"
 end
