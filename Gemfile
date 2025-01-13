@@ -35,7 +35,7 @@ gem "devise_token_auth"
 
 gem "graphql"
 
-gem "carrierwave", "~> 3.0"
+gem "carrierwave", "~> 3.1"
 
 gem "fog-aws"
 
